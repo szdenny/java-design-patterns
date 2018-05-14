@@ -25,9 +25,6 @@ package com.iluwatar.mutex;
 import org.junit.Test;
 import java.io.IOException;
 
-/**
- * Application Test Entrypoint
- */
 public class AppTest{
   @Test
   public void test() throws IOException {

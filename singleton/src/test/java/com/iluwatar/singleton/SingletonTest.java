@@ -22,8 +22,7 @@
  */
 package com.iluwatar.singleton;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +31,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.Supplier;
-import org.junit.Test;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 
 /**
  * This class provides several test case that test singleton construction.
@@ -42,7 +43,7 @@ import org.junit.Test;
  * the same when called in the DIFFERENT thread.
  *
  * Date: 12/29/15 - 19:25 PM
- * @param <S> Supplier method generating singletons
+ *
  * @author Jeroen Meulemeester
  * @author Richard Jones
  */

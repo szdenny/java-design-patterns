@@ -39,7 +39,7 @@ public class WizardDaoImpl extends DaoBaseImpl<Wizard> implements WizardDao {
 
   @Override
   public Wizard findByName(String name) {
-    Session session = getSessionFactory().openSession();
+    Session session = getSession();
     Transaction tx = null;
     Wizard result = null;
     try {

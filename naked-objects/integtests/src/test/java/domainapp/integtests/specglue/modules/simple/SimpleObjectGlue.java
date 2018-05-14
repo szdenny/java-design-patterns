@@ -14,20 +14,18 @@
  */
 package domainapp.integtests.specglue.modules.simple;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import java.util.List;
+import java.util.UUID;
+
+import org.apache.isis.core.specsupport.specs.CukeGlueAbstract;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import domainapp.dom.modules.simple.SimpleObject;
 import domainapp.dom.modules.simple.SimpleObjects;
-import java.util.List;
-import java.util.UUID;
-import org.apache.isis.core.specsupport.specs.CukeGlueAbstract;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
-/**
- * Test Simple Object Operations
- */
 public class SimpleObjectGlue extends CukeGlueAbstract {
 
   @Given("^there are.* (\\d+) simple objects$")

@@ -23,9 +23,7 @@
 package com.iluwatar.delegation.simple;
 
 import org.junit.Test;
-/**
- * Application Test Entry
- */
+
 public class AppTest {
 
   @Test

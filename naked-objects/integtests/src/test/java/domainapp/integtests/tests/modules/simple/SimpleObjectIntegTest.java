@@ -18,22 +18,21 @@
  */
 package domainapp.integtests.tests.modules.simple;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import domainapp.dom.modules.simple.SimpleObject;
-import domainapp.fixture.scenarios.RecreateSimpleObjects;
-import domainapp.integtests.tests.SimpleAppIntegTest;
 import javax.inject.Inject;
+
+import org.junit.Before;
+import org.junit.Test;
+
 import org.apache.isis.applib.DomainObjectContainer;
 import org.apache.isis.applib.fixturescripts.FixtureScripts;
 import org.apache.isis.applib.services.wrapper.DisabledException;
 import org.apache.isis.applib.services.wrapper.InvalidException;
-import org.junit.Before;
-import org.junit.Test;
 
-/**
- * Test Fixtures with Simple Objects
- */
+import domainapp.dom.modules.simple.SimpleObject;
+import domainapp.fixture.scenarios.RecreateSimpleObjects;
+import domainapp.integtests.tests.SimpleAppIntegTest;
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class SimpleObjectIntegTest extends SimpleAppIntegTest {
 
   @Inject
@@ -55,9 +54,6 @@ public class SimpleObjectIntegTest extends SimpleAppIntegTest {
     simpleObjectWrapped = wrap(simpleObjectPojo);
   }
 
-  /**
-   * Test Object Name accessibility
-   */
   public static class Name extends SimpleObjectIntegTest {
 
     @Test
@@ -79,9 +75,6 @@ public class SimpleObjectIntegTest extends SimpleAppIntegTest {
     }
   }
 
-  /**
-   * Test Validation of SimpleObject Names
-   */
   public static class UpdateName extends SimpleObjectIntegTest {
 
     @Test
@@ -106,9 +99,6 @@ public class SimpleObjectIntegTest extends SimpleAppIntegTest {
     }
   }
 
-  /**
-   * Test ContainerTitle generation based on SimpleObject Name
-   */
   public static class Title extends SimpleObjectIntegTest {
 
     @Inject

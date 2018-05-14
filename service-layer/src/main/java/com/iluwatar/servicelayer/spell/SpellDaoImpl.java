@@ -38,7 +38,7 @@ public class SpellDaoImpl extends DaoBaseImpl<Spell> implements SpellDao {
 
   @Override
   public Spell findByName(String name) {
-    Session session = getSessionFactory().openSession();
+    Session session = getSession();
     Transaction tx = null;
     Spell result = null;
     try {

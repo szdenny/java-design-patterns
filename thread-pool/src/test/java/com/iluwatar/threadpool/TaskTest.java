@@ -22,8 +22,7 @@
  */
 package com.iluwatar.threadpool;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,12 +34,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Date: 12/30/15 - 18:22 PM
- * Test for Tasks using a Thread Pool
- * @param <T> Type of Task
+ *
  * @author Jeroen Meulemeester
  */
 public abstract class TaskTest<T extends Task> {

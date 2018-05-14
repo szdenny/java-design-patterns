@@ -25,9 +25,6 @@ import org.apache.isis.core.integtestsupport.scenarios.ScenarioExecutionForInteg
 
 import domainapp.integtests.bootstrap.SimpleAppSystemInitializer;
 
-/**
- * SimpleApp Integration Tests will implement this Abstract Class.
- */
 public abstract class SimpleAppIntegTest extends IntegrationTestAbstract {
 
   @BeforeClass
@@ -38,4 +35,5 @@ public abstract class SimpleAppIntegTest extends IntegrationTestAbstract {
     // instantiating will install onto ThreadLocal
     new ScenarioExecutionForIntegration();
   }
+
 }

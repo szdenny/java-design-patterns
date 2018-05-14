@@ -30,9 +30,6 @@ import java.util.Map;
  */
 public class Character implements Prototype {
 
-  /**
-   * Enumeration of Character types
-   */
   public enum Type {
     WARRIOR, MAGE, ROGUE
   }

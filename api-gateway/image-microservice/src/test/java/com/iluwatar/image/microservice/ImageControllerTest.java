@@ -25,9 +25,6 @@ package com.iluwatar.image.microservice;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Test for Image Rest Controller
- */
 public class ImageControllerTest {
   @Test
   public void testGetImagePath() {

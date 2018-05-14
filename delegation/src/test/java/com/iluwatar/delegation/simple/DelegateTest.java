@@ -22,24 +22,22 @@
  */
 package com.iluwatar.delegation.simple;
 
-import static org.junit.Assert.assertEquals;
-
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
 import com.iluwatar.delegation.simple.printers.CanonPrinter;
 import com.iluwatar.delegation.simple.printers.EpsonPrinter;
 import com.iluwatar.delegation.simple.printers.HpPrinter;
-import java.util.LinkedList;
-import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.LoggerFactory;
 
-/**
- * Test for Delegation Pattern
- */
+import java.util.LinkedList;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+
 public class DelegateTest {
 
   private InMemoryAppender appender;
@@ -80,9 +78,6 @@ public class DelegateTest {
     assertEquals("Epson Printer : Test Message Printed", appender.getLastMessage());
   }
 
-  /**
-   * Logging Appender
-   */
   private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
 
     private List<ILoggingEvent> log = new LinkedList<>();

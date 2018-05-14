@@ -25,10 +25,6 @@ package com.iluwatar.price.microservice;
 import org.junit.Assert;
 import org.junit.Test;
 
-
-/**
- * Test for Price Rest Controller
- */
 public class PriceControllerTest {
   @Test
   public void testgetPrice() {

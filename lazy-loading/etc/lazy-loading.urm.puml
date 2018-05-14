@@ -34,7 +34,7 @@ package com.iluwatar.lazy.loading {
     + get() : Heavy
   }
 }
-HolderThreadSafe -->  "-heavy" Heavy
 HolderNaive -->  "-heavy" Heavy
+HolderThreadSafe -->  "-heavy" Heavy
 HeavyFactory -->  "-heavyInstance" Heavy
 @enduml

@@ -22,19 +22,18 @@
  */
 package com.iluwatar.interpreter;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiFunction;
-import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Date: 12/14/15 - 11:48 AM
  *
- * Test Case for Expressions
- * @param <E> Type of Expression
  * @author Jeroen Meulemeester
  */
 public abstract class ExpressionTest<E extends Expression> {

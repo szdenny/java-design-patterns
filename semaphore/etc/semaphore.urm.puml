@@ -18,7 +18,7 @@ package com.iluwatar.semaphore {
     + values() : FruitType[] {static}
   }
   class FruitBowl {
-    - fruit : List<Fruit>
+    - fruit : ArrayList<Fruit>
     + FruitBowl()
     + countFruit() : int
     + put(f : Fruit)
@@ -48,8 +48,8 @@ package com.iluwatar.semaphore {
     + release()
   }
 }
-FruitType ..+ Fruit
 Fruit -->  "-type" FruitType
+FruitType ..+ Fruit
 FruitShop -->  "-semaphore" Semaphore
 FruitBowl -->  "-fruit" Fruit
 Semaphore ..|> Lock 

@@ -21,9 +21,6 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import domainapp.integtests.bootstrap.SimpleAppSystemInitializer;
 
-/**
- * BootStrapping IntegrationTesting Before and After Steps
- */
 public class BootstrappingGlue extends CukeGlueAbstract {
 
   @Before(value = {"@integration"}, order = 100)

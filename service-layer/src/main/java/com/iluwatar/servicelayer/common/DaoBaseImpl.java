@@ -27,7 +27,6 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
@@ -46,17 +45,13 @@ public abstract class DaoBaseImpl<E extends BaseEntity> implements Dao<E> {
   protected Class<E> persistentClass = (Class<E>) ((ParameterizedType) getClass()
       .getGenericSuperclass()).getActualTypeArguments()[0];
 
-  /*
-   * Making this getSessionFactory() instead of getSession() so that it is the responsibility
-   * of the caller to open as well as close the session (prevents potential resource leak).
-   */
-  protected SessionFactory getSessionFactory() {
-    return HibernateUtil.getSessionFactory();
+  protected Session getSession() {
+    return HibernateUtil.getSessionFactory().openSession();
   }
 
   @Override
   public E find(Long id) {
-    Session session = getSessionFactory().openSession();
+    Session session = getSession();
     Transaction tx = null;
     E result = null;
     try {
@@ -78,7 +73,7 @@ public abstract class DaoBaseImpl<E extends BaseEntity> implements Dao<E> {
 
   @Override
   public void persist(E entity) {
-    Session session = getSessionFactory().openSession();
+    Session session = getSession();
     Transaction tx = null;
     try {
       tx = session.beginTransaction();
@@ -96,7 +91,7 @@ public abstract class DaoBaseImpl<E extends BaseEntity> implements Dao<E> {
 
   @Override
   public E merge(E entity) {
-    Session session = getSessionFactory().openSession();
+    Session session = getSession();
     Transaction tx = null;
     E result = null;
     try {
@@ -116,7 +111,7 @@ public abstract class DaoBaseImpl<E extends BaseEntity> implements Dao<E> {
 
   @Override
   public void delete(E entity) {
-    Session session = getSessionFactory().openSession();
+    Session session = getSession();
     Transaction tx = null;
     try {
       tx = session.beginTransaction();
@@ -134,7 +129,7 @@ public abstract class DaoBaseImpl<E extends BaseEntity> implements Dao<E> {
 
   @Override
   public List<E> findAll() {
-    Session session = getSessionFactory().openSession();
+    Session session = getSession();
     Transaction tx = null;
     List<E> result = null;
     try {

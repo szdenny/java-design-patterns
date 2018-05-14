@@ -22,9 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Implementation of Actions on Students Data
- */
 public final class StudentDataMapperImpl implements StudentDataMapper {
 
   /* Note: Normally this would be in the form of an actual database */

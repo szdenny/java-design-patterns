@@ -25,9 +25,6 @@ package com.iluwatar.factorykit.app;
 import com.iluwatar.factorykit.App;
 import org.junit.Test;
 
-/**
- * Application Test Entrypoint
- */
 public class AppTest {
 
   @Test

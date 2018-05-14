@@ -22,17 +22,18 @@
  */
 package com.iluwatar.resource.acquisition.is.initialization;
 
-import static org.junit.Assert.assertTrue;
-
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
-import java.util.LinkedList;
-import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.LoggerFactory;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * Date: 12/28/15 - 9:31 PM
@@ -63,9 +64,6 @@ public class ClosableTest {
     assertTrue(appender.logContains("Sliding door closes."));
   }
 
-  /**
-   * Logging Appender Implementation
-   */
   public class InMemoryAppender extends AppenderBase<ILoggingEvent> {
     private List<ILoggingEvent> log = new LinkedList<>();
 
